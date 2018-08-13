@@ -34,6 +34,7 @@ public class CustomRealm extends AuthorizingRealm{
 		String userName = (String)principals.getPrimaryPrincipal();
 		Set<String> roles = getRolesByUserName(userName);
 		Set<String> permissions = getPermissionsByUserName(userName);
+		//创建AuthorizationInfo对象
 		SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
 		//设置角色
 		authorizationInfo.setRoles(roles);
